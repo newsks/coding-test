@@ -7,16 +7,6 @@
 // let input = fs.readFileSync("/dev/stdin").toString().split("\n");
 
 // // 문자열을 수로 변환할때 parseInt에 비하여 Number의 속도가 더 빠르게 동작
-// let testCase = Number(input[0]);
-// let answer = "";
-
-// for (let t = 1; t <= testCase; t++) {
-//   let data = input[t].split("\n");
-//   let a = Number(data[0]);
-//   let b = Number(data[1]);
-//   answer += a + b + "\n";
-// }
-// console.log(answer);
 
 let fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().split("\n");
@@ -24,7 +14,7 @@ let input = fs.readFileSync("/dev/stdin").toString().split("\n");
 let testCase = Number(input[0]);
 let answer = "";
 
-for (let t = 0; t <= testCase; t++) {
+for (let t = 1; t <= testCase; t++) {
   let data = input[t].split(" ");
   let a = Number(data[0]);
   let b = Number(data[1]);
