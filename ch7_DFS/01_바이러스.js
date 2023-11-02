@@ -28,11 +28,11 @@ for (let i = 2; i <= m + 1; i++) {
 let cnt = 0;
 let visited = new Array(n + 1).fill(false);
 function dfs(x) {
-  // 깊이    우선   탐색(DFS) 수행
-  visited[x] = true; // 현재   노드를    방문    처리
+  // 깊이 우선탐색(DFS) 수행
+  visited[x] = true; // 현재 노드를 방문 처리
   cnt++;
   for (y of graph[x]) {
-    // 현재   노드와    연결된    다른   노드를    재귀적으로    방문
+    // 현재 노드와  연결된 다른 노드를 재귀적으로 방문
     if (!visited[y]) dfs(y);
   }
 }
