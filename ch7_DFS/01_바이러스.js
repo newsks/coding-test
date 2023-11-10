@@ -26,6 +26,7 @@ for (let i = 2; i <= m + 1; i++) {
   graph[x].push(y);
   graph[y].push(x);
 }
+
 let cnt = 0;
 let visited = new Array(n + 1).fill(false);
 function dfs(x) {
