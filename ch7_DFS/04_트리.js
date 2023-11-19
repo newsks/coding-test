@@ -36,6 +36,7 @@ while (true) {
     if (!isCycle(i, 0)) cnt++; // 사이클이 아니라면 트리이므로, 카운트하기
   }
 }
+
 if (cnt == 0) console.log(`Case ${testCase}: No trees.`);
 else if (cnt == 1) console.log(`Case ${testCase}: There is one tree.`);
 else console.log(`Case ${testCase}: A forest of ${cnt} trees.`);
