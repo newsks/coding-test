@@ -13,7 +13,6 @@
 
 // 출력
 // 1번 컴퓨터가 웜 바이러스에 걸렸을 때, 1번 컴퓨터를 통해 웜 바이러스에 걸리게 되는 컴퓨터의 수를 첫째 줄에 출력한다.
-
 let fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().split("\n");
 let n = Number(input[0]); // 정점의 개수(N)
@@ -26,6 +25,7 @@ for (let i = 2; i <= m + 1; i++) {
   graph[x].push(y);
   graph[y].push(x);
 }
+
 let cnt = 0;
 let visited = new Array(n + 1).fill(false);
 function dfs(x) {
