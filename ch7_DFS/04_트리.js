@@ -16,6 +16,7 @@ let fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().split("\n");
 let line = 0;
 let testCase = 1;
+
 while (true) {
   let [n, m] = input[line].split(" ").map(Number);
   if (n == 0 && m == 0) break; // 노드의 개수(N)와 간선의 개수(M)
@@ -26,7 +27,9 @@ while (true) {
     graph[x].push(y);
     graph[y].push(x);
   }
+
   visited = new Array(n + 1).fill(false); // 방문처리 배열
+
   let cnt = 0; // 그래프 내 트리의 개수
   for (let i = 1; i <= n; i++) {
     // 하나씩 노드를 확인하며
@@ -36,6 +39,7 @@ while (true) {
     if (!isCycle(i, 0)) cnt++; // 사이클이 아니라면 트리이므로, 카운트하기
   }
 }
+
 if (cnt == 0) console.log(`Case ${testCase}: No trees.`);
 else if (cnt == 1) console.log(`Case ${testCase}: There is one tree.`);
 else console.log(`Case ${testCase}: A forest of ${cnt} trees.`);
