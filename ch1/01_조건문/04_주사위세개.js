@@ -24,6 +24,7 @@ let input = fs.readFileSync("/dev/stdin").toString().split("\n");
 let a = Number(input[0].split(" ")[0]);
 let b = Number(input[0].split(" ")[1]);
 let c = Number(input[0].split(" ")[2]);
+
 // 세개의 수가 모두 같은 경우
 if (a == b && b == c) console.log(10000 + a * 1000);
 // 세개의 수가 전부 같지는 않지만, 두개의 수가 같은 경우
